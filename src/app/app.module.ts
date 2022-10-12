@@ -10,9 +10,9 @@ import { AuthComponent } from "./layouts/auth/auth.component";
 
 // admin views
 import { DashboardComponent } from "./views/admin/dashboard/dashboard.component";
-import { MapsComponent } from "./views/admin/maps/maps.component";
-import { SettingsComponent } from "./views/admin/settings/settings.component";
-import { TablesComponent } from "./views/admin/tables/tables.component";
+import { MapsComponent } from "./views/admin/papers/papers.component";
+import { SettingsComponent } from "./views/admin/school/school.component";
+import { TablesComponent } from "./views/admin/exams/exams.component";
 
 // auth views
 import { LoginComponent } from "./views/auth/login/login.component";
@@ -47,6 +47,11 @@ import { PagesDropdownComponent } from "./components/dropdowns/pages-dropdown/pa
 import { NotificationDropdownComponent } from "./components/dropdowns/notification-dropdown/notification-dropdown.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
+import { FacultyComponent } from './views/admin/faculty/faculty.component';
+import { DomainComponent } from './views/admin/domain/domain.component';
+import { SubjectComponent } from './views/admin/subject/subject.component';
+import { SessionComponent } from './views/admin/session/session.component';
+import { CorrectionComponent } from './views/admin/correction/correction.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +89,11 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
     IndexComponent,
     LandingComponent,
     ProfileComponent,
+    FacultyComponent,
+    DomainComponent,
+    SubjectComponent,
+    SessionComponent,
+    CorrectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
