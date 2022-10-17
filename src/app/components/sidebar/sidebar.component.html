@@ -161,15 +161,25 @@
             Papers
           </a>
         </li>
-      </ul>
 
-      <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
         <li class="items-center">
           <a
             [routerLink]="['/admin/faculty']"
-            class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+            class="text-xs uppercase py-3 font-bold block"
+            routerLinkActive
+            #adminfac="routerLinkActive"
+            [ngClass]="
+            adminfac.isActive
+                ? 'text-red-600 hover:text-red-700'
+                : 'text-blueGray-700 hover:text-blueGray-500'
+            "
           >
-            <i class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"></i>
+            <i
+              class="fas fa-map-marked mr-2 text-sm"
+              [ngClass]="
+              adminfac.isActive ? 'opacity-75' : 'text-blueGray-300'
+              "
+            ></i>
             Faculty
           </a>
         </li>
@@ -177,21 +187,43 @@
         <li class="items-center">
           <a
             [routerLink]="['/admin/domain']"
-            class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+            class="text-xs uppercase py-3 font-bold block"
+            routerLinkActive
+            #admindom="routerLinkActive"
+            [ngClass]="
+            admindom.isActive
+                ? 'text-red-600 hover:text-red-700'
+                : 'text-blueGray-700 hover:text-blueGray-500'
+            "
           >
-            <i class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>
+            <i
+              class="fas fa-map-marked mr-2 text-sm"
+              [ngClass]="
+              admindom.isActive ? 'opacity-75' : 'text-blueGray-300'
+              "
+            ></i>
             Domain
           </a>
         </li>
-      </ul>
 
-      <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
         <li class="items-center">
           <a
             [routerLink]="['/admin/subject']"
-            class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+            class="text-xs uppercase py-3 font-bold block"
+            routerLinkActive
+            #adminsub="routerLinkActive"
+            [ngClass]="
+            adminsub.isActive
+                ? 'text-red-600 hover:text-red-700'
+                : 'text-blueGray-700 hover:text-blueGray-500'
+            "
           >
-            <i class="fas fa-newspaper text-blueGray-300 mr-2 text-sm"></i>
+            <i
+              class="fas fa-map-marked mr-2 text-sm"
+              [ngClass]="
+              adminsub.isActive ? 'opacity-75' : 'text-blueGray-300'
+              "
+            ></i>
             Subjects
           </a>
         </li>
@@ -199,9 +231,21 @@
         <li class="items-center">
           <a
             [routerLink]="['/admin/session']"
-            class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+            class="text-xs uppercase py-3 font-bold block"
+            routerLinkActive
+            #adminsess="routerLinkActive"
+            [ngClass]="
+            adminsess.isActive
+                ? 'text-red-600 hover:text-red-700'
+                : 'text-blueGray-700 hover:text-blueGray-500'
+            "
           >
-            <i class="fas fa-user-circle text-blueGray-300 mr-2 text-sm"></i>
+            <i
+              class="fas fa-map-marked mr-2 text-sm"
+              [ngClass]="
+              adminsess.isActive ? 'opacity-75' : 'text-blueGray-300'
+              "
+            ></i>
             Session
           </a>
         </li>
@@ -209,12 +253,22 @@
         <li class="items-center">
           <a
             [routerLink]="['/admin/correction']"
-            class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+            class="text-xs uppercase py-3 font-bold block"
+            routerLinkActive
+            #admincor="routerLinkActive"
+            [ngClass]="
+            admincor.isActive
+                ? 'text-red-600 hover:text-red-700'
+                : 'text-blueGray-700 hover:text-blueGray-500'
+            "
           >
-            <i class="fas fa-user-circle text-blueGray-300 mr-2 text-sm"></i>
+            <i
+              class="fas fa-map-marked mr-2 text-sm"
+              [ngClass]="
+              admincor.isActive ? 'opacity-75' : 'text-blueGray-300'
+              "
+            ></i>
             Correction
           </a>
         </li>
       </ul>
-
-
