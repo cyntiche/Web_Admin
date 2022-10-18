@@ -16,12 +16,6 @@ import { TablesComponent } from "./views/admin/exams/exams.component";
 
 // auth views
 import { LoginComponent } from "./views/auth/login/login.component";
-import { RegisterComponent } from "./views/auth/register/register.component";
-
-// no layouts views
-import { IndexComponent } from "./views/index/index.component";
-import { LandingComponent } from "./views/landing/landing.component";
-import { ProfileComponent } from "./views/profile/profile.component";
 
 // components for views and layouts
 
@@ -30,8 +24,6 @@ import { AuthNavbarComponent } from "./components/navbars/auth-navbar/auth-navba
 import { CardBarChartComponent } from "./components/cards/card-bar-chart/card-bar-chart.component";
 import { CardLineChartComponent } from "./components/cards/card-line-chart/card-line-chart.component";
 import { CardPageVisitsComponent } from "./components/cards/card-page-visits/card-page-visits.component";
-import { CardProfileComponent } from "./components/cards/card-profile/card-profile.component";
-import { CardSettingsComponent } from "./components/cards/card-settings/card-settings.component";
 import { CardSocialTrafficComponent } from "./components/cards/card-social-traffic/card-social-traffic.component";
 import { CardStatsComponent } from "./components/cards/card-stats/card-stats.component";
 import { CardTableComponent } from "./components/cards/card-table/card-table.component";
@@ -40,18 +32,21 @@ import { FooterComponent } from "./components/footers/footer/footer.component";
 import { FooterSmallComponent } from "./components/footers/footer-small/footer-small.component";
 import { HeaderStatsComponent } from "./components/headers/header-stats/header-stats.component";
 import { IndexNavbarComponent } from "./components/navbars/index-navbar/index-navbar.component";
-import { MapExampleComponent } from "./components/maps/map-example/map-example.component";
-import { IndexDropdownComponent } from "./components/dropdowns/index-dropdown/index-dropdown.component";
-import { TableDropdownComponent } from "./components/dropdowns/table-dropdown/table-dropdown.component";
-import { PagesDropdownComponent } from "./components/dropdowns/pages-dropdown/pages-dropdown.component";
-import { NotificationDropdownComponent } from "./components/dropdowns/notification-dropdown/notification-dropdown.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
-import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { FacultyComponent } from './views/admin/faculty/faculty.component';
 import { DomainComponent } from './views/admin/domain/domain.component';
 import { SubjectComponent } from './views/admin/subject/subject.component';
 import { SessionComponent } from './views/admin/session/session.component';
 import { CorrectionComponent } from './views/admin/correction/correction.component';
+import { TabSchoolComponent } from './components/tables/tab-school/tab-school.component';
+import { TabDomainComponent } from './components/tables/tab-domain/tab-domain.component';
+import { TabExamsComponent } from './components/tables/tab-exams/tab-exams.component';
+import { TabFacultyComponent } from './components/tables/tab-faculty/tab-faculty.component';
+import { TabPapersComponent } from './components/tables/tab-papers/tab-papers.component';
+import { TabCorrectionComponent } from './components/tables/tab-correction/tab-correction.component';
+import { TabSessionComponent } from './components/tables/tab-session/tab-session.component';
+import { TabSubjectComponent } from './components/tables/tab-subject/tab-subject.component';
+
 
 @NgModule({
   declarations: [
@@ -59,23 +54,15 @@ import { CorrectionComponent } from './views/admin/correction/correction.compone
     DashboardComponent,
     CardBarChartComponent,
     CardLineChartComponent,
-    IndexDropdownComponent,
-    PagesDropdownComponent,
-    TableDropdownComponent,
-    NotificationDropdownComponent,
-    UserDropdownComponent,
     SidebarComponent,
     FooterComponent,
     FooterSmallComponent,
     FooterAdminComponent,
     CardPageVisitsComponent,
-    CardProfileComponent,
-    CardSettingsComponent,
     CardSocialTrafficComponent,
     CardStatsComponent,
     CardTableComponent,
     HeaderStatsComponent,
-    MapExampleComponent,
     AuthNavbarComponent,
     AdminNavbarComponent,
     IndexNavbarComponent,
@@ -85,15 +72,19 @@ import { CorrectionComponent } from './views/admin/correction/correction.compone
     SettingsComponent,
     TablesComponent,
     LoginComponent,
-    RegisterComponent,
-    IndexComponent,
-    LandingComponent,
-    ProfileComponent,
     FacultyComponent,
     DomainComponent,
     SubjectComponent,
     SessionComponent,
     CorrectionComponent,
+    TabSchoolComponent,
+    TabDomainComponent,
+    TabExamsComponent,
+    TabFacultyComponent,
+    TabPapersComponent,
+    TabCorrectionComponent,
+    TabSessionComponent,
+    TabSubjectComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
