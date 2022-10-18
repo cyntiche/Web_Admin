@@ -56,8 +56,9 @@ const routes: Routes = [
   // no layout views
   { path: "profile", component: ProfileComponent },
   { path: "landing", component: LandingComponent },
-  { path: "", component: IndexComponent },
-  { path: "**", redirectTo: "", pathMatch: "full" },
+  { path: "index", component: IndexComponent },
+  { path: "", component: LoginComponent },
+  { path: "", redirectTo: "login", pathMatch: "full" },
 ];
 
 @NgModule({
