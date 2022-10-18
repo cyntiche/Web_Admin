@@ -52,7 +52,6 @@
           <td
           id="dropdownDefault" data-dropdown-toggle="dropdown" class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
           >
-            <app-table-dropdown></app-table-dropdown>
           </td>
         </tr>
       </tbody>
@@ -65,8 +64,9 @@
         <h3
           class="font-semibold text-lg"
           [ngClass]="color === 'light' ? 'text-blueGray-700' : 'text-white'"
-        >
+        ><a [routerLink]="['/admin/school']">
           Add
+        </a>
         </h3>
       </div>
     </div>

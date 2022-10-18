@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tab-session.component.html',
 })
 export class TabSessionComponent implements OnInit {
+  color: any;
 
   constructor() { }
 

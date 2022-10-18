@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tab-correction.component.html',
 })
 export class TabCorrectionComponent implements OnInit {
+color: any;
 
   constructor() { }
 

@@ -16,6 +16,16 @@ import { DomainComponent } from "./views/admin/domain/domain.component";
 import { SessionComponent } from "./views/admin/session/session.component";
 import { SubjectComponent } from "./views/admin/subject/subject.component";
 
+//tables
+import { TabCorrectionComponent } from "./components/tables/tab-correction/tab-correction.component";
+import { TabDomainComponent } from "./components/tables/tab-domain/tab-domain.component";
+import { TabExamsComponent } from "./components/tables/tab-exams/tab-exams.component";
+import { TabFacultyComponent } from "./components/tables/tab-faculty/tab-faculty.component";
+import { TabPapersComponent } from "./components/tables/tab-papers/tab-papers.component";
+import { TabSchoolComponent } from "./components/tables/tab-school/tab-school.component";
+import { TabSessionComponent } from "./components/tables/tab-session/tab-session.component";
+import { TabSubjectComponent } from "./components/tables/tab-subject/tab-subject.component";
+
 // auth views
 import { LoginComponent } from "./views/auth/login/login.component";
 
@@ -37,6 +47,16 @@ const routes: Routes = [
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],
   },
+
+  { path: "tabcorrection", component: TabCorrectionComponent, },
+   { path: "tabdomain", component: TabDomainComponent,},
+    {path: "tabexams", component: TabExamsComponent,},
+    {path: "tabfac", component: TabFacultyComponent,},
+    {path: "tabpapers", component: TabPapersComponent,},
+    {path: "tabschool", component: TabSchoolComponent,},
+    {path: "tabsession", component: TabSessionComponent,},
+    {path: "tabsub", component: TabSubjectComponent},
+
   // auth views
   {
     path: "auth",

@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tab-exams.component.html',
 })
 export class TabExamsComponent implements OnInit {
+color: any;
 
   constructor() { }
 
