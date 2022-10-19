@@ -46,6 +46,7 @@ import { TabPapersComponent } from './components/tables/tab-papers/tab-papers.co
 import { TabCorrectionComponent } from './components/tables/tab-correction/tab-correction.component';
 import { TabSessionComponent } from './components/tables/tab-session/tab-session.component';
 import { TabSubjectComponent } from './components/tables/tab-subject/tab-subject.component';
+import { CreateCorrectionComponent } from './views/admin/correction/create-correction/create-correction.component';
 
 
 @NgModule({
@@ -85,6 +86,7 @@ import { TabSubjectComponent } from './components/tables/tab-subject/tab-subject
     TabCorrectionComponent,
     TabSessionComponent,
     TabSubjectComponent,
+    CreateCorrectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

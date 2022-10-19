@@ -12,4 +12,13 @@ export class TabSchoolComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showModal = false;
+  toggleModal(){
+    this.showModal = !this.showModal;
+  }
+
+  savedata()
+  {
+    //collect and save data fromm inputs
+  }
 }

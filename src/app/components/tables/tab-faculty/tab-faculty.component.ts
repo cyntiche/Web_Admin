@@ -12,4 +12,22 @@ color: any;
   ngOnInit(): void {
   }
 
+  showModal = false;
+  toggleModal(){
+    this.showModal = !this.showModal;
+  }
+
+  showdrop1 = false;
+  showdrop2 = false;
+  showdrop3 = false;
+  toggledrop1(n:number){
+    if(n==1) { this.showdrop1 = !this.showdrop1; }
+    if(n==2) { this.showdrop2 = !this.showdrop2; }
+    if(n==3) { this.showdrop3 = !this.showdrop3; }
+  }
+
+  savedata()
+  {
+    //collect and save data fromm inputs
+  }
 }

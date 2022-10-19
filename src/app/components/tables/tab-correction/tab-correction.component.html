@@ -61,14 +61,65 @@
   <div class="rounded-t mb-0 px-4 py-3 border-0">
     <div class="flex flex-wrap items-center text-right">
       <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-        <h3
-          class="font-semibold text-lg"
-          [ngClass]="color === 'light' ? 'text-blueGray-700' : 'text-white'"
-        ><a [routerLink]="['/admin/school']">
+         <button type="button" data-modal-toggle="authentication-modal" type="button" (click)="toggleModal()">
           Add
-        </a>
-        </h3>
+        </button>
       </div>
     </div>
   </div>
 </div>
+
+<div *ngIf="showModal" class="py-12 px-12 bg-gray-700 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0">
+  <div class="relative w-auto my-6 mx-auto max-w-5xl py-12 px-12">
+    <!--content-->
+    <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+      <!--header-->
+      <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+        <h3 class="text-3xl font-semibold">
+          Add a school
+        </h3>
+        <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" (click)="toggleModal()">
+          <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+            ×
+          </span>
+        </button>
+      </div>
+      <!--body-->
+      <form action="">
+      <div class="relative p-5 flex-wrap">
+        <label for="name" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Name :</label>
+        <input id="name" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="James" required/>
+
+        <label for="phone" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Phone :</label>
+        <input id="phone" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="658171712" required/>
+
+        <label for="facebook" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Facebook :</label>
+        <input id="facebook" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="myprepa" required/>
+
+        <label for="web" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">WebSite :</label>
+        <input id="web" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="www.myprepa.com" required/>
+
+        <label for="location" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Location :</label>
+        <input id="location" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Yaounde" required/>
+
+        <label for="filemount" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Filemount :</label>
+        <textarea id="filemount" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-40 flex items-center pl-3 text-sm border-gray-300 rounded border" required></textarea>
+
+        <label for="about" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">About :</label>
+        <textarea id="about" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-40 flex items-center pl-3 text-sm border-gray-300 rounded border" required></textarea>
+
+        <label for="picture" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Picture : </label>
+        <input id="picture" type="file" required>
+      </div>
+      <!--footer-->
+      <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+        <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" (click)="toggleModal()">
+          Close
+        </button>
+        <input class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="submit" (click)="savedata()" value="savechanges">
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+

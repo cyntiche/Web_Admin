@@ -48,14 +48,14 @@ const routes: Routes = [
     ],
   },
 
-  { path: "tabcorrection", component: TabCorrectionComponent, },
+ /* { path: "tabcorrection", component: TabCorrectionComponent, },
    { path: "tabdomain", component: TabDomainComponent,},
     {path: "tabexams", component: TabExamsComponent,},
     {path: "tabfac", component: TabFacultyComponent,},
     {path: "tabpapers", component: TabPapersComponent,},
     {path: "tabschool", component: TabSchoolComponent,},
     {path: "tabsession", component: TabSessionComponent,},
-    {path: "tabsub", component: TabSubjectComponent},
+    {path: "tabsub", component: TabSubjectComponent},*/
 
   // auth views
   {
