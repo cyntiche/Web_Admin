@@ -17,6 +17,11 @@ export class TabSchoolComponent implements OnInit {
     this.showModal = !this.showModal;
   }
 
+  showdrop1 = false;
+  toggledrop1(n:number){
+    if(n==1) { this.showdrop1 = !this.showdrop1; }
+  }
+
   savedata()
   {
     //collect and save data fromm inputs
