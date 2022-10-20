@@ -50,13 +50,23 @@
             $2,500 USD
           </td>
           <td
-          id="dropdownDefault" data-dropdown-toggle="dropdown" class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
+           id="dropdownDefault" data-dropdown-toggle="dropdown" class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
           >
+          <button><i class="fas fa-ellipsis-v"  (click)="toggledrop1(5)"></i></button>
+          <div *ngIf="showdrop5" class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="py-1" role="none">
+              <!-- repeat this for all faculties -->
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">edit</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">delete</a>
+              <!--*******************************-->
+            </div>
+          </div>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+
 
   <div class="rounded-t mb-0 px-4 py-3 border-0">
     <div class="flex flex-wrap items-center text-right">
@@ -76,7 +86,7 @@
       <!--header-->
       <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
         <h3 class="text-3xl font-semibold">
-          Add a school
+          Add a Corection
         </h3>
         <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" (click)="toggleModal()">
           <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
@@ -87,29 +97,55 @@
       <!--body-->
       <form action="">
       <div class="relative p-5 flex-wrap">
-        <label for="name" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Name :</label>
-        <input id="name" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="James" required/>
+        <label for="file" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Chose a file to upload :</label>
+        <input id="file" type="file" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" required/>
 
-        <label for="phone" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Phone :</label>
-        <input id="phone" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="658171712" required/>
+        <label for="nbr" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Number of pages :</label>
+        <input id="nbr" type="number" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="3" required/>
 
-        <label for="facebook" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Facebook :</label>
-        <input id="facebook" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="myprepa" required/>
+                <!--************************************ dropdown ***********************************************************************-->
+                <div class="relative inline-block text-left p-5 justify-around flex">
+                 <div id="2">
+                  <div>
+                   <button type="button" class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button" aria-expanded="true" aria-haspopup="true" (click)="toggledrop1(2)">
+                    Is a Correction ?
+                    <!-- Heroicon name: mini/chevron-down -->
+                    <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                    </svg>
+                   </button>
+                  </div>
 
-        <label for="web" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">WebSite :</label>
-        <input id="web" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="www.myprepa.com" required/>
+                <div *ngIf="showdrop2" class="absolute middle-0 z-10 mt-2 w-56 origin-top-middle rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                  <div class="py-1" role="none">
+                    <!-- repeat this for all faculties -->
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">True</a>
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">False</a>
+                    <!--*******************************-->
+                  </div>
+                </div>
+               </div>
 
-        <label for="location" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Location :</label>
-        <input id="location" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Yaounde" required/>
+               <div id="3">
+                <div>
+                 <button type="button" class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button" aria-expanded="true" aria-haspopup="true" (click)="toggledrop1(3)">
+                  Chose Paper
+                  <!-- Heroicon name: mini/chevron-down -->
+                  <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                  </svg>
+                 </button>
+                </div>
 
-        <label for="filemount" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Filemount :</label>
-        <textarea id="filemount" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-40 flex items-center pl-3 text-sm border-gray-300 rounded border" required></textarea>
-
-        <label for="about" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">About :</label>
-        <textarea id="about" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-40 flex items-center pl-3 text-sm border-gray-300 rounded border" required></textarea>
-
-        <label for="picture" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Picture : </label>
-        <input id="picture" type="file" required>
+              <div *ngIf="showdrop3" class="absolute right-30 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                <div class="py-1" role="none">
+                  <!-- repeat this for all faculties -->
+                  <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                  <!--*******************************-->
+                </div>
+              </div>
+             </div>
+                </div>
       </div>
       <!--footer-->
       <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
@@ -122,4 +158,3 @@
     </div>
   </div>
 </div>
-

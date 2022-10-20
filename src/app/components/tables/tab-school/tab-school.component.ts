@@ -18,8 +18,10 @@ export class TabSchoolComponent implements OnInit {
   }
 
   showdrop1 = false;
+  showdrop5 = false;
   toggledrop1(n:number){
     if(n==1) { this.showdrop1 = !this.showdrop1; }
+    if(n==5) { this.showdrop5 = !this.showdrop5; }
   }
 
   savedata()

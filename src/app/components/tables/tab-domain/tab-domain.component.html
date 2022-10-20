@@ -52,6 +52,15 @@
           <td
           id="dropdownDefault" data-dropdown-toggle="dropdown" class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
           >
+          <button><i class="fas fa-ellipsis-v"  (click)="toggledrop1(5)"></i></button>
+          <div *ngIf="showdrop5" class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="py-1" role="none">
+              <!-- repeat this for all faculties -->
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">edit</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">delete</a>
+              <!--*******************************-->
+            </div>
+          </div>
           </td>
         </tr>
       </tbody>
@@ -61,13 +70,36 @@
   <div class="rounded-t mb-0 px-4 py-3 border-0">
     <div class="flex flex-wrap items-center text-right">
       <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-        <h3
-          class="font-semibold text-lg"
-          [ngClass]="color === 'light' ? 'text-blueGray-700' : 'text-white'"
-        >
+         <button type="button" data-modal-toggle="authentication-modal" type="button" (click)="toggleModal()">
           Add
-        </h3>
+        </button>
       </div>
     </div>
   </div>
+</div>
+
+<div *ngIf="showModal" class="py-12 px-12 bg-gray-700 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0">
+  <div class="relative w-auto my-6 mx-auto max-w-5xl py-12 px-12">
+    <!--content-->
+    <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+      <!--header-->
+      <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+        <h3 class="text-3xl font-semibold">
+          Add a Domain
+        </h3>
+        <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" (click)="toggleModal()">
+          <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+            ×
+          </span>
+        </button>
+      </div>
+      <!--body-->
+      <form action="">
+      <div class="relative p-5 flex-wrap">
+        <label for="name" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Name :</label>
+        <input id="name" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Medecin" required/>
+</div>
+</form>
+</div>
+</div>
 </div>
