@@ -1,8 +1,9 @@
 export interface papers
 {
   id? : number
-  fileName? : string
-  numberPages? : number
+  paperName? : string
   isCorrection? : boolean
-  subjectId? : number
+  subject_id? : number
+  created_at? : string
+  updated_at? : string
 }

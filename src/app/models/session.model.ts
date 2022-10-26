@@ -1,9 +1,11 @@
 export interface session
 {
   id ? : number
-  year? : Date
-  facultyId? : number
-  schoolId? : number
-  domainId? : number
-  examId? : number
+  year? : string
+  faculty_id? : number
+  school_id? : number
+  domain_id? : number
+  exam_id? : number
+  created_at? : string
+  updated_at? : string
 }

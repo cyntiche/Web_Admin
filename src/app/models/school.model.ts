@@ -2,13 +2,14 @@
 export interface school
 {
   id? : number;
-  name? : string;
-  picture? : string;
+  schoolName? : string;
   about? : string;
   phonenumber? : string
-  filemountings? : string
+  fileMountings? : string
   facebook? : string
   website? : string
   location? : string
-  domainid? : string
+  domain_id? : string
+  created_at? : string
+  updated_at? : string
 }

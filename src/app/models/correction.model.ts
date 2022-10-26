@@ -1,8 +1,9 @@
 export interface correction
 {
   id? : number
-  fileName? : string
-  numberPages? : number
+  paperName? : string
   isCorrection? : boolean
-  paperId? : number
+  subject_id? : number
+  created_at? : string
+  updated_at? : string
 }

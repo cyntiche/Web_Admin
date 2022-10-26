@@ -2,6 +2,8 @@ export interface faculty
 {
   id? : number
   facultyName? : string
-  domainid? : string
-  schoolid? : string
+  domain_id? : number
+  school_id? : number
+  created_at? : string
+  updated_at? : string
 }
