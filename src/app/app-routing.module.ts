@@ -15,6 +15,8 @@ import { CorrectionComponent } from "./views/admin/correction/correction.compone
 import { DomainComponent } from "./views/admin/domain/domain.component";
 import { SessionComponent } from "./views/admin/session/session.component";
 import { SubjectComponent } from "./views/admin/subject/subject.component";
+import { UsersComponent } from "./views/admin/users/users.component";
+import { TestimonialComponent } from "./views/admin/testimonial/testimonial.component";
 
 //tables
 import { TabCorrectionComponent } from "./components/tables/tab-correction/tab-correction.component";
@@ -44,6 +46,8 @@ const routes: Routes = [
       { path: "domain", component: DomainComponent },
       { path: "session", component: SessionComponent },
       { path: "subject", component: SubjectComponent },
+      { path: "user", component: UsersComponent},
+      { path: "testimonial", component: TestimonialComponent},
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],
   },

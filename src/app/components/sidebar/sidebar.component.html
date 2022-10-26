@@ -89,6 +89,28 @@
 
         <li class="items-center">
           <a
+            [routerLink]="['/admin/user']"
+            class="text-xs uppercase py-3 font-bold block"
+            routerLinkActive
+            #adminuser="routerLinkActive"
+            [ngClass]="
+              adminuser.isActive
+                ? 'text-red-600 hover:text-red-700'
+                : 'text-blueGray-700 hover:text-blueGray-500'
+            "
+          >
+            <i
+              class="fas fa-solid fa-scroll mr-2 text-sm"
+              [ngClass]="
+                adminuser.isActive ? 'opacity-75' : 'text-blueGray-300'
+              "
+            ></i>
+            users
+          </a>
+        </li>
+
+        <li class="items-center">
+          <a
             [routerLink]="['/admin/school']"
             class="text-xs uppercase py-3 font-bold block"
             routerLinkActive
@@ -128,28 +150,6 @@
               "
             ></i>
             Exams
-          </a>
-        </li>
-
-        <li class="items-center">
-          <a
-            [routerLink]="['/admin/papers']"
-            class="text-xs uppercase py-3 font-bold block"
-            routerLinkActive
-            #adminMaps="routerLinkActive"
-            [ngClass]="
-              adminMaps.isActive
-                ? 'text-red-600 hover:text-red-700'
-                : 'text-blueGray-700 hover:text-blueGray-500'
-            "
-          >
-            <i
-              class="fas fa-solid fa-scroll mr-2 text-sm"
-              [ngClass]="
-                adminMaps.isActive ? 'opacity-75' : 'text-blueGray-300'
-              "
-            ></i>
-            Papers
           </a>
         </li>
 
@@ -243,6 +243,28 @@
 
         <li class="items-center">
           <a
+            [routerLink]="['/admin/papers']"
+            class="text-xs uppercase py-3 font-bold block"
+            routerLinkActive
+            #adminMaps="routerLinkActive"
+            [ngClass]="
+              adminMaps.isActive
+                ? 'text-red-600 hover:text-red-700'
+                : 'text-blueGray-700 hover:text-blueGray-500'
+            "
+          >
+            <i
+              class="fas fa-solid fa-scroll mr-2 text-sm"
+              [ngClass]="
+                adminMaps.isActive ? 'opacity-75' : 'text-blueGray-300'
+              "
+            ></i>
+            Papers
+          </a>
+        </li>
+
+        <li class="items-center">
+          <a
             [routerLink]="['/admin/correction']"
             class="text-xs uppercase py-3 font-bold block"
             routerLinkActive
@@ -262,4 +284,29 @@
             Correction
           </a>
         </li>
+
+        <li class="items-center">
+          <a
+            [routerLink]="['/admin/testimonial']"
+            class="text-xs uppercase py-3 font-bold block"
+            routerLinkActive
+            #admintest="routerLinkActive"
+            [ngClass]="
+              admintest.isActive
+                ? 'text-red-600 hover:text-red-700'
+                : 'text-blueGray-700 hover:text-blueGray-500'
+            "
+          >
+            <i
+              class="fas fa-solid fa-scroll mr-2 text-sm"
+              [ngClass]="
+                admintest.isActive ? 'opacity-75' : 'text-blueGray-300'
+              "
+            ></i>
+            Testimonials
+          </a>
+        </li>
+
+
       </ul>
+

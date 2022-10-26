@@ -47,6 +47,10 @@ import { TabCorrectionComponent } from './components/tables/tab-correction/tab-c
 import { TabSessionComponent } from './components/tables/tab-session/tab-session.component';
 import { TabSubjectComponent } from './components/tables/tab-subject/tab-subject.component';
 import { CreateCorrectionComponent } from './views/admin/correction/create-correction/create-correction.component';
+import { UsersComponent } from './views/admin/users/users.component';
+import { TestimonialComponent } from './views/admin/testimonial/testimonial.component';
+import { TabUsersComponent } from './components/tables/tab-users/tab-users.component';
+import { TabTestimonialComponent } from './components/tables/tab-testimonial/tab-testimonial.component';
 
 
 @NgModule({
@@ -87,6 +91,10 @@ import { CreateCorrectionComponent } from './views/admin/correction/create-corre
     TabSessionComponent,
     TabSubjectComponent,
     CreateCorrectionComponent,
+    UsersComponent,
+    TestimonialComponent,
+    TabUsersComponent,
+    TabTestimonialComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
