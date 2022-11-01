@@ -1,4 +1,4 @@
-export interface papers
+export interface Paper
 {
   id? : number
   paperName? : string

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/service/data.service';
 
 @Component({
   selector: 'app-tab-school',
@@ -6,11 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabSchoolComponent implements OnInit {
   color: any;
+  schools:any;
+  constructor(private dataService:DataService) {
 
-  constructor() { }
+   }
 
-  ngOnInit(): void {
-  }
+   ngOnInit(): void {
+    this.getSchoolList();
+   }
+   getSchoolList()
+   {
+    this.dataService.getData('schools').subscribe(
+      res =>{
+        console.log(res);
+        this.schools = res
+      }
+    )
+   }
+
+
 
   showModal = false;
   toggleModal(){
@@ -24,8 +39,4 @@ export class TabSchoolComponent implements OnInit {
     if(n==5) { this.showdrop5 = !this.showdrop5; }
   }
 
-  savedata()
-  {
-    //collect and save data fromm inputs
-  }
 }

@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -96,7 +97,10 @@ import { TabTestimonialComponent } from './components/tables/tab-testimonial/tab
     TabUsersComponent,
     TabTestimonialComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    HttpClientModule,
+    BrowserModule, 
+    AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

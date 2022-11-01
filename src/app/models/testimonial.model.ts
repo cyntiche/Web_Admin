@@ -1,4 +1,4 @@
-export interface testimonial
+export interface Testimonial
 {
   id? : number
   content? : number

@@ -1,5 +1,5 @@
 
-export interface school
+export interface School
 {
   id? : number;
   schoolName? : string;

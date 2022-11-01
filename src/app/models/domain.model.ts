@@ -1,4 +1,4 @@
-export interface domain
+export interface Domain
 {
   id? : number
   domainName? : string

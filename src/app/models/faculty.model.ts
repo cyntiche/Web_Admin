@@ -1,4 +1,4 @@
-export interface faculty
+export interface Faculty
 {
   id? : number
   facultyName? : string

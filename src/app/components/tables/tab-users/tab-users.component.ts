@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';2
+import {DataService} from 'src/app/service/data.service';
 
 @Component({
   selector: 'app-tab-users',
@@ -7,10 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class TabUsersComponent implements OnInit {
 
   color: any;
-  constructor() { }
+  users:any;
+  constructor(private dataService:DataService) { 
+
+  }
 
   ngOnInit(): void {
+    this.getUserList();
   }
+  
+    getUserList()
+    {
+      console.log("list of all User");
+      this.dataService.getData('users').subscribe(
+        res=> {
+          console.log(res);
+          this.users = res;
+        }
+      )
+    }
 
   showModal = false;
   toggleModal(){
@@ -26,10 +42,5 @@ export class TabUsersComponent implements OnInit {
     if(n==2) { this.showdrop2 = !this.showdrop2; }
     if(n==3) { this.showdrop3 = !this.showdrop3; }
     if(n==5) { this.showdrop5 = !this.showdrop5; }
-  }
-
-  savedata()
-  {
-    //collect and save data fromm inputs
   }
 }

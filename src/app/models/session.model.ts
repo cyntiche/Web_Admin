@@ -1,4 +1,4 @@
-export interface session
+export interface Session
 {
   id ? : number
   year? : string

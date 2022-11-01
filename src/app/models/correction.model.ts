@@ -1,4 +1,4 @@
-export interface correction
+export interface Correction
 {
   id? : number
   paperName? : string
