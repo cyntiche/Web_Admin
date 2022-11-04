@@ -28,6 +28,10 @@ export class TabUsersComponent implements OnInit {
       )
     }
 
+    savedata(){
+
+    }
+
   showModal = false;
   toggleModal(){
     this.showModal = !this.showModal;

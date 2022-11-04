@@ -107,7 +107,29 @@
             ></i>
             users
           </a>
+          
         </li>
+        <li class="items-center">
+                  <a
+                    [routerLink]="['/admin/domain']"
+                    class="text-xs uppercase py-3 font-bold block"
+                    routerLinkActive
+                    #admindom="routerLinkActive"
+                    [ngClass]="
+                    admindom.isActive
+                        ? 'text-red-600 hover:text-red-700'
+                        : 'text-blueGray-700 hover:text-blueGray-500'
+                    "
+                  >
+                    <i
+                      class="fas fa-chalkboard-teacher mr-2 text-sm"
+                      [ngClass]="
+                      admindom.isActive ? 'opacity-75' : 'text-blueGray-300'
+                      "
+                    ></i>
+                    Domain
+                  </a>
+                </li>
 
         <li class="items-center">
           <a
@@ -128,6 +150,28 @@
               "
             ></i>
             School
+          </a>
+        </li>
+        
+        <li class="items-center">
+          <a
+            [routerLink]="['/admin/faculty']"
+            class="text-xs uppercase py-3 font-bold block"
+            routerLinkActive
+            #adminfac="routerLinkActive"
+            [ngClass]="
+            adminfac.isActive
+                ? 'text-red-600 hover:text-red-700'
+                : 'text-blueGray-700 hover:text-blueGray-500'
+            "
+          >
+            <i
+              class="fas fa-university mr-2 text-sm"
+              [ngClass]="
+              adminfac.isActive ? 'opacity-75' : 'text-blueGray-300'
+              "
+            ></i>
+            Faculty
           </a>
         </li>
 
@@ -153,49 +197,6 @@
           </a>
         </li>
 
-        <li class="items-center">
-          <a
-            [routerLink]="['/admin/faculty']"
-            class="text-xs uppercase py-3 font-bold block"
-            routerLinkActive
-            #adminfac="routerLinkActive"
-            [ngClass]="
-            adminfac.isActive
-                ? 'text-red-600 hover:text-red-700'
-                : 'text-blueGray-700 hover:text-blueGray-500'
-            "
-          >
-            <i
-              class="fas fa-university mr-2 text-sm"
-              [ngClass]="
-              adminfac.isActive ? 'opacity-75' : 'text-blueGray-300'
-              "
-            ></i>
-            Faculty
-          </a>
-        </li>
-
-        <li class="items-center">
-          <a
-            [routerLink]="['/admin/domain']"
-            class="text-xs uppercase py-3 font-bold block"
-            routerLinkActive
-            #admindom="routerLinkActive"
-            [ngClass]="
-            admindom.isActive
-                ? 'text-red-600 hover:text-red-700'
-                : 'text-blueGray-700 hover:text-blueGray-500'
-            "
-          >
-            <i
-              class="fas fa-chalkboard-teacher mr-2 text-sm"
-              [ngClass]="
-              admindom.isActive ? 'opacity-75' : 'text-blueGray-300'
-              "
-            ></i>
-            Domain
-          </a>
-        </li>
 
         <li class="items-center">
           <a

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/service/data.service';
 
 @Component({
   selector: 'app-tab-faculty',
@@ -6,11 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabFacultyComponent implements OnInit {
 color: any;
+faculties:any;
+constructor(private dataService:DataService) {
 
-  constructor() { }
+ }
 
-  ngOnInit(): void {
-  }
+ ngOnInit(): void {
+  this.getfacultyList();
+ }
+ getfacultyList()
+ {
+  this.dataService.getData('faculties').subscribe(
+    res =>{
+      console.log(res);
+      this.faculties = res['data']
+    }
+  )
+ }
 
   showModal = false;
   toggleModal(){

@@ -1,4 +1,7 @@
+// import { FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { DataService } from 'src/app/service/data.service';
 
 @Component({
   selector: 'app-tab-domain',
@@ -6,16 +9,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabDomainComponent implements OnInit {
 color: any;
+domains:any;
+constructor(private dataService:DataService,) {
 
-  constructor() { }
+ }
 
-  ngOnInit(): void {
-  }
+ ngOnInit(): void {
+  this.getdomainList();
+ }
 
-  showModal = false;
-  toggleModal(){
-    this.showModal = !this.showModal;
-  }
+//  checkoutForm = this.formBuilder.group({
+//   domainName: '',
+// });
+
+
+// onSubmit(): void {
+//   // Process checkout data here
+//   // this.items = this.cartService.clearCart();
+//   console.warn('Your order has been submitted', this.checkoutForm.value);
+//   this.checkoutForm.reset();
+// }
+
+
+ getdomainList()
+ {
+  this.dataService.getData('domains').subscribe(
+    res =>{
+      console.log(res);
+      this.domains = res
+    }
+  )
+ }
+
+ showModal = false;
+ toggleModal(){
+   this.showModal = !this.showModal;
+ }
 
   showdrop1 = false;
   showdrop5 = false;
@@ -24,9 +53,6 @@ color: any;
     if(n==5) { this.showdrop5 = !this.showdrop5; }
   }
 
-  savedata()
-  {
-    //collect and save data fromm inputs
-  }
+
 
 }
